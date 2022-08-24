@@ -1,0 +1,26 @@
+{
+  "name": "whatsapp_api_v1.0.0",
+  "version": "1.0.0",
+  "description": "Whatsapp api yang bisa di integrasikan dengan website atau app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "whatsapp",
+    "api",
+    "otp"
+  ],
+  "author": "Armin Bayu Murti",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "express": "^4.18.1",
+    "http": "0.0.1-security",
+    "mime-types": "^2.1.35",
+    "qrcode": "^1.5.1",
+    "socket.io": "2.3.0",
+    "whatsapp-web.js": "^1.17.1"
+  }
+}

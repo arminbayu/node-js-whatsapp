@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Multi Devices Whatsapp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/css/google_material.css" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
+
+<body>
+
+  <div id="app">
+    <h1>Tambahkan Devices</h1>
+    <div class="form-container">
+      <form action="">
+        <label for="device-name">Device Name</label><br>
+        <input type="text" id="device-name" placeholder="Device Name" required>
+        <input type="hidden" id="client-id" placeholder="Client ID" readonly disabled>
+        <br><br>
+        <label for="phone-number">Phone Number</label><br>
+        <input type="text" id="phone-number" placeholder="Phone Number" required>
+        <br><br>
+        <label for="client-description">Deskripsi</label><br>
+        <textarea rows="3" id="client-description" placeholder="Masukkan deskripsi" required></textarea>
+        <br><br>
+        <!-- <label for="master-code">Master Code</label><br> -->
+        <!-- <input type="hidden" id="master-code" style="width: 100px;" value="12345678" required></input> -->
+        <br>
+        <button class="add-client-btn">Tambah Client</button>
+      </form>
+    </div>
+    <div class="client-container">
+      <div class="client hide">
+        <h3 class="title"></h3> 
+        <h5 class="phone-number"></h5>         
+        <p class="description"></p>
+        <br>
+        <div style="word-wrap:break-word">
+          <strong>API KEY</strong>
+          <span class="client-id"></span>
+        </div>
+        <br>
+        <h3>Logs:</h3>
+        <div style="height: 100px;overflow-y: auto;">
+          <ul class="logs"></ul>
+        </div>
+        <img src="" alt="QR Code" id="qrcode">
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/socket.io.js"></script>
+  <script src="js/hash.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
