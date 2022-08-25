@@ -3,12 +3,12 @@ $(document).ready(function () {
     var dt = new Date();
     var date = dt.getDate() + "" + dt.getMonth() + "" + dt.getFullYear();
     var time = dt.getHours() + "" + dt.getMinutes() + "" + dt.getSeconds();
-    var data = date+""+time;
+    var data = date + "" + time;
     const digest = sha256(data);
     $('#client-id').val(digest);
 
     $('.add-client-btn').click(function () {
-        if ($('#device-name').val() != "" & $('#phone-number').val() != "" & $('#client-description').val() != "") {
+        if ($('#device-name').val() != "" & $('#phone-number').val() != "" & $('#client-description').val() != "" & $('#master-code').val() == "12345678") {
 
             var deviceName = $('#device-name').val();
             var phoneNumber = $('#phone-number').val();
@@ -29,7 +29,7 @@ $(document).ready(function () {
 
             socket.emit('create-session', {
                 device_name: deviceName,
-                phone_number:phoneNumber,
+                phone_number: phoneNumber,
                 client_id: clientId,
                 description: clientDescription
             });
