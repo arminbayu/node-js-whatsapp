@@ -84,6 +84,7 @@ const createSession = function (
     qrcode.toDataURL(qr, (err, url) => {
       io.emit('qr', { client_id: client_id, src: url });
       io.emit('message', { client_id: client_id, text: 'QR Code received, scan please!' });
+      console.log('QR RECEIVED : ', client_id);
     });
   });
 
